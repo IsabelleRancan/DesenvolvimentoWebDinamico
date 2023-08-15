@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Resultado</h1>
+    <button onclick="sub()">Ver resultado!</button>
+
+    <div id="result"></div>
+
+    <script>
+      //----------------------------------------
+      function somaDiferentes(a, b) {
+        if (a === b) {
+          document.write("Número iguais ");
+          return "n pode";
+        }
+        document.write("Números diferentes! ");
+        return a + b;
+      }
+      //----------------------------------------
+      function sub() {
+        let r = somaDiferentes(2, 3); // dinamic
+        // document.write(r);
+        // QUESTAO DE PROVA
+        document.getElementById('result')
+      }
+      //----------------------------------------
+      function areaTriangulo(b, h) {
+        return (b * h) / 2;
+      }
+    </script>
+  </body>
+</html>
