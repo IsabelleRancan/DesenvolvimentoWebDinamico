@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<body>
+
+    <h1>Idade de um nadador</h1>
+
+    <section id="result"></section>
+
+    <script>
+
+        let name = window.prompt("Digite o nome do nadador: ");
+        let n = Number(window.prompt("Digite a idade: "));
+
+        if (n >= 18){
+            document.getElementById("result").innerHTML = `O nadador ${name} com ${n} anos se encaixa na categoria Adulto`;
+        } else if (n >= 14) {
+            document.getElementById("result").innerHTML = `O nadador ${name} com ${n} anos se encaixa na categoria Juvenil`;
+        } else if (n >= 9) {
+            document.getElementById("result").innerHTML = `O nadador ${name} com ${n} anos se encaixa na categoria Infantil`;
+        } else {
+            document.getElementById("result").innerHTML = `O nadador ${name} com ${n} anos se encaixa na categoria Mirim`;
+        }
+
+    </script>
+
+</body>
+</html>

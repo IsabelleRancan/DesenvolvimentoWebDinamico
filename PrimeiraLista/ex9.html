@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+</head>
+<body>
+
+    <h1>Verificando se um número é positivo, negativo ou igual a zero</h1>
+
+    <section id="result"></section>
+
+    <script>
+        let n = Number(window.prompt("Digite um número: "));
+
+        if (n > 0){
+            document.getElementById("result").innerHTML = `O número ${n} é positivo`;
+        } else if (n < 0) {
+            document.getElementById("result").innerHTML = `O número ${n} é negativo`;
+        } else {
+            document.getElementById("result").innerHTML = `O número ${n} é igual a zero`;
+        }
+
+    </script>
+    
+</body>
+</html>

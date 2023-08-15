@@ -7,7 +7,31 @@
 </head>
 <body>
 
-    
+    <h1>Códigos de Usuário</h1>
+
+    <section id="result"></section>
+
+    <script>
+        let n1 = Number(window.prompt("Digite um número: "));
+        let n2 = Number(window.prompt("Digite mais um número: "));
+        let cod = Number(window.prompt("Digite seu Código de usuário: "));
+
+        let res = document.getElementById("result");
+
+        if(cod === 1) {
+            let r = n1 + n2;
+            res.innerHTML += `${r}`;
+        } else if (cod === 2) {
+            let r = n1 * n2;
+            res.innerHTML += `${r}`;
+        } else if (cod === 3){
+            let r = n1 / n2;
+            res.innerHTML += `${r}`;
+        } else {
+            res.innerHTML = "Código de usuário inválido";
+        }
+
+    </script>
     
 </body>
 </html>
