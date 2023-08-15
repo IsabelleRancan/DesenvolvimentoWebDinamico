@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+
+    <h2>Novo salário de um funcionário</h2>
+
+    <section id="result"></section>
+
+    <script>
+        let name = window.prompt("Digite o nome do funcionário: ");
+        let salary = Number(window.prompt("Digite o salário do funcionário: "));
+
+        let newSalary = salary + (salary * 10/100);
+
+        let res = document.getElementById("result");
+
+        res.innerHTML += `<p> O novo salário do funcionário ${name} é de R$ ${newSalary.toFixed(2)}</p>`; //to fixed pra deixar os dois zeros depois do ponto
+    </script>
+    
+</body>
+</html>

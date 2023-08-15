@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+
+    <section id="result"></section>
+
+    <script>
+        let A = Number(window.prompt("Digite o primeiro número: "));
+        let B = Number(window.prompt("Digite o segundo número: "));
+
+        function calculando(){
+            if (A === B){
+                document.write("Os números são iguais e sua soma é igual a: ")
+                return A + B;
+            } else {
+                let C = A * B
+                document.write("Os números são diferentes e a sua multiplicação é igual a: ")
+                return C;
+            }
+        }
+
+        let res = document.getElementById("result")
+        res.innerHTML = calculando()
+
+    </script>
+    
+</body>
+</html>

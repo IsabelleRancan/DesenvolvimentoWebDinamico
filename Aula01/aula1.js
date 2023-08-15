@@ -1,3 +1,7 @@
+//var=>não respeita escopo e pode ser redefinida
+//let => respeita escopo e pode ser redefinida
+//const => respeita escopo e não pode ser redefinida
+
 var a = 10; // inteiro
 var b = "20";
 var c = false;

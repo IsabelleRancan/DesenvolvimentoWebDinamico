@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+
+    <h1>Média Aritmetica de 3 números</h1>
+
+    <section id="result"></section>
+
+    <script>
+        let n1 = Number(window.prompt("Digite o primeiro número: "));
+        let n2 = Number(window.prompt("Digite o segundo número: "));
+        let n3 = Number(window.prompt("Digite o terceiro número: "));
+
+        let med = (n1 + n2 + n3) / 3;
+
+        let res = document.getElementById("result");
+
+        res.innerHTML += `<p>A média aritmética entre ${n1}, ${n2} e ${n3} é: ${med}</p>`;
+
+    </script>
+    
+</body>
+</html>

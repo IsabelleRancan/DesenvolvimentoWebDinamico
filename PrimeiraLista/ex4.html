@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 4</title>
+</head>
+<body>
+
+    <h1>Valor de um parcelamento</h1>
+
+    <section id="result"></section>
+
+    <script>
+
+        let PrecoTotal = Number(window.prompt("Digite o valor do produto: "));
+
+        let P3 = PrecoTotal + (PrecoTotal * 10/100);
+        let P5 = PrecoTotal + (PrecoTotal * 20/100);
+
+        let res = document.getElementById("result")
+
+        res.innerHTML += `<p>O valor do produto a vista é igual a R$ ${PrecoTotal.toFixed(2)} </p>`
+        res.innerHTML += `<p>O valor do produto parcelado em 3X é igual a R$ ${P3.toFixed(2)} </p>`
+        res.innerHTML += `<p>O valor do produto parcelada em 5X é igual a R$ ${P5.toFixed(2)} </p>`
+        
+    </script>
+    
+</body>
+</html>
