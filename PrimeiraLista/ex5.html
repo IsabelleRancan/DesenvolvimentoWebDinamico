@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 5</title>
+  </head>
+  <body>
+
+    <h1>Boletim aluno</h1>
+
+    <section id="result"></section>
+
+    <script>
+      let name = window.prompt("Digite o nome do aluno");
+      let n1 = Number(window.prompt("Digite a primeira nota: "));
+      let n2 = Number(window.prompt("Digite a segunda nota: "));
+      let n3 = Number(window.prompt("Digite a terceira nota: "));
+
+      let med = (n1 + n2 + n3) / 3;
+
+      let res = document.getElementById("result");
+
+      if (med >= 8) {
+        res.innerHTML += `<p>${name}</p>`;
+        res.innerHTML += `<p>Sua média final é igual a: ${med}</p>`;
+        res.innerHTML += `<p>Você foi aprovado!</p>`;
+
+      } else {
+        res.innerHTML += `<p>${name}</p>`;
+        res.innerHTML += `<p>Sua média final é igual a: ${med}</p>`;
+        res.innerHTML += `<p>Você foi reprovado!</p>`;
+      }
+
+
+    </script>
+  </body>
+</html>
