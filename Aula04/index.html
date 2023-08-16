@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .bgColor{
+            background-color: #3f3;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border: 1px solid red;
+            padding: 10px;
+        }
+
+        .blue{
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- onload chama uma função quando a página carregar, pesquisar os comportamentos de mouse e teclado e imput -->
+    <!-- *<div id="container" onmouseover="trocaTexto(this)"> chamando a função apenas quando o mouse está sobre os elementos -->
+
+    <div id="container">
+
+        <p class="text">Lorem ipsum dolor sit.</p>
+
+        <span class="text">Lorem ipsum dolor sit amet.</span>
+
+        <p name="text-name">Lorem ipsum dolor sit.</p>
+
+    </div>
+
+    <script>
+
+        const div = document.getElementById('container')
+        div.classList.add('bgColor') //chamando o style criado no começo da página
+
+        /*div.style.background = '#3f3'
+        div.style.border = '2px solid red'
+        div.style.boxShaow = '0 1px 1px'
+        
+        estilizando em JS*/
+
+        const text = document.getElementsByClassName('text')
+        text[1].classList.add('blue')
+        //text[1].classList.remove('blue') vai remover o estilo, o [1] é pra determinar qual elemento do vetor eu quero selecionar
+
+        const name = document.getElementsByName('text-name')
+
+        const p = document.getElementsByTagName('p')
+
+        const q = document.querySelector('#container>span')
+
+        console.log(q);
+
+        /*console.log(div);
+        console.log(text);
+        console.log(name);
+        console.log(p);*/
+
+        function trocaTexto(self){
+            self = div.innerHTML = 'Outro texto!' //está pegando a div container toda do HTML
+        }
+
+
+    </script>
+    
+</body>
+</html>
