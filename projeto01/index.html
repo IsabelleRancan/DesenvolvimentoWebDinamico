@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.scss">
+</head>
+<body>
+
+    <h1>Contatos</h1>
+
+    <div class="container">
+        <div class="form-row">
+            <label for="txNome">Nome</label>
+            <input type="text" name="nome" id="txtNome" placeholder="Digite seu nome">
+            <div class="invalid feedback">Informe o nome corretamente</div>
+        </div>
+
+        <div class="form-row">
+            <label for="txFone">Telefone</label>
+            <input type="number" name="fone" id="txtTelefone" placeholder="(XX) XXXXX-XXXX">
+            <div class="invalid feedback">Informe o telefone corretamente</div>
+        </div>
+
+        <button onclick="">Enviar</button>
+
+        <table>
+            <tr>
+                <td>#ID</td>
+                <td>Nome</td>
+                <td>Cel</td>
+                <td>Ação</td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
