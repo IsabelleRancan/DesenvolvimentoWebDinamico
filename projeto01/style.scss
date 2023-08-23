@@ -16,6 +16,7 @@ h1{
 }
 
 .container{
+  margin: 5rem;
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -28,16 +29,35 @@ h1{
   height: 20rem;
   border: .1rem solid black;
   border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1 fr, 2 fr;
+  grid-template-rows: 1 fr, 1 fr;
+  //flex-direction: column;
+
+}
+
+.nome{
+  width: 100%;
+  height: 5rem;
   display: flex;
-  flex-direction: column;
-
+  align-items: center;  
+  border: .2rem solid black;
 }
 
-.input{
-  width: 2rem;
-  height: rem;
+.telefone{
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;  
+  border: .2rem solid black;
 }
 
+input{
+  height: 2.5rem;
+  width: 18rem;
+  display: flex;
+  
+}
 /*input#txtNome{
   width: 20rem;
 }
