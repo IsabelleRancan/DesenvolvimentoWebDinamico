@@ -16,7 +16,7 @@ h1{
 }
 
 .container{
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;  
@@ -24,21 +24,27 @@ h1{
 
 .formulario{
   padding: 1rem;
-  /*display: flex;
-  flex-direction: column;*/
+  width: 40rem;
+  height: 20rem;
+  border: .1rem solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+
 }
 
-input{
-  margin-left: .5rem;
+.input{
+  width: 2rem;
+  height: rem;
 }
 
-input#txtNome{
+/*input#txtNome{
   width: 20rem;
 }
 
 input#txtTelefone{
   width: 18.1rem;
-}
+}*/
 
 button{
   border: none;
@@ -51,6 +57,3 @@ button{
   margin-left: 20rem;
 }
 
-table{
-  
-}

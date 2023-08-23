@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
+    <script src="srcipt.js"></script>
 </head>
 <body>
 
@@ -13,26 +14,31 @@
     <div class="container">
 
         <div class="formulario">
+            <div class="nome">
+                <label for="txNome">Nome</label>
+                <input type="text" name="nome" id="txtNome" placeholder="Digite seu nome">
+                <!-- <div class="invalid feedback">Informe o nome corretamente</div> -->
+            </div>
         
-            <label for="txNome">Nome</label>
-            <input type="text" name="nome" id="txtNome" placeholder="Digite seu nome">
-            <div class="invalid feedback">Informe o nome corretamente</div>
-        
-            <label for="txFone">Telefone</label>
-            <input type="number" name="fone" id="txtTelefone" placeholder="(XX) XXXXX-XXXX">
-            <div class="invalid feedback">Informe o telefone corretamente</div>
+            <div class="telefone">
+                <label for="txFone">Telefone</label>
+                <input type="number" name="fone" id="txtTelefone" placeholder="(XX) XXXXX-XXXX">
+                <!--    <div class="invalid feedback">Informe o telefone corretamente</div> -->
+            </div>
 
-        </div>
-            
             <button onclick="">Enviar</button>
 
-        <table border="0">
-            <tr>
-                <td>#ID</td>
-                <td>Nome</td>
-                <td>Cel</td>
-                <td>Ação</td>
-            </tr>
+        </div>
+
+        <table id="tbContacts">
+            <tbody>
+                <tr>
+                    <td>#ID</td>
+                    <td>Nome</td>
+                    <td>Cel</td>
+                    <td>Ação</td>
+                </tr>
+            </tbody>
         </table>
     </div>
     
