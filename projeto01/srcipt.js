@@ -3,21 +3,21 @@ let bd_contacts = []
 
 function inserirContato(){
     //criando o objeto contact
-    const contact = { /*o objeto contatob possui os atributos name e fone*/
+    const contact = { /*o objeto contato possui os atributos name e fone*/
         name: document.getElementById('txtNome').value,
         fone: document.getElementById('txtFone').value
     }
 
-    //chamando o banco de dados (array) 
+    //chamando o banco de dados (array) na função de baixo
     bd_contacts = getLocalStorage(); /* 'bd_contacts' vetor com várias informações dentro*/
-    console.log(bd_contacts)
+    console.log(bd_contacts) // escrevendo na tela o bd
 
     bd_contacts.push(contact) /*trazendo os novos valores para dentro do meu vetor (push)*/
 
     //armazenar os contatos do localStorage
     setLocalStorage(bd_contacts)
 
-    //atualizar a tabela após a inserção
+    //atualizar a tabela após a inserção chamando a função update ()
     updateTeble()
 
 }
@@ -56,10 +56,11 @@ function newRow(contact, index){
 
 }
 
+//vai limpar toda a tabela antes de receber novas informações
 function cleanTable(){
-    /*vai limpar toda a tabela antes de receber novas informações*/
+    document.querySelector('#tbContacts>tbody').innerHTML = ''
 
 
 }
 
-//carregar os dados quandoa abrir a página 
+//carregar os dados quando abrir a página 
