@@ -1,15 +1,18 @@
 //------------------------------------------------------------------------------------------------------------
+let bd_contacts = []
+
 function inserirContato(){
-    const contact = {
+    //criando o objeto contact
+    const contact = { /*o objeto contatob possui os atributos name e fone*/
         name: document.getElementById('txtNome').value,
         fone: document.getElementById('txtFone').value
     }
 
-    //erro 
-    const bd_contacts = getLocalStorage(); /* 'bd_contacts' vetor com várias informações dentro*/
+    //chamando o banco de dados (array) 
+    bd_contacts = getLocalStorage(); /* 'bd_contacts' vetor com várias informações dentro*/
     console.log(bd_contacts)
 
-    bd_contacts.push(contact) /*trazendo os novos valores para dentro do meu vetor*/
+    bd_contacts.push(contact) /*trazendo os novos valores para dentro do meu vetor (push)*/
 
     //armazenar os contatos do localStorage
     setLocalStorage(bd_contacts)
@@ -19,11 +22,12 @@ function inserirContato(){
 
 }
 //------------------------------------------------------------------------------------------------------------
-function getLocalStorage(){
-    return JSON.parse(localStorage.getItem('bd_contacts')) /*vai retornar como se fosse uma tabela de banco de dados*/
+function getLocalStorage(){ /*get tira*/
+    return JSON.parse(localStorage.getItem('bd_contacts')) || [] /*vai retornar como se fosse uma tabela de banco de dados
+    ou ele retorna alguma coisa ou ele retorna vazio   */
 }
 //------------------------------------------------------------------------------------------------------------
-function setLocalStorage(bd_contacts){ /*se tem uma função get, normalmente tbm teremos uma função set*/
+function setLocalStorage(bd_contacts){ /*se tem uma função get, normalmente tbm teremos uma função set*/ /*set guarda*/
 
     localStorage.setItem('bd_contacts', JSON.stringify(bd_contacts)) //primeiro é o identificador e o segundo é o vetor
 } 
@@ -53,6 +57,8 @@ function newRow(contact, index){
 }
 
 function cleanTable(){
+    /*vai limpar toda a tabela antes de receber novas informações*/
+
 
 }
 

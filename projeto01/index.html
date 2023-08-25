@@ -15,31 +15,42 @@
 
         <div class="formulario">
             <div class="nome">
-                <label for="txNome">Nome</label>
+                <label for="txtNome">Nome</label>
                 <input type="text" name="nome" id="txtNome" placeholder="Digite seu nome">
                 <!-- <div class="invalid feedback">Informe o nome corretamente</div> -->
             </div>
         
             <div class="telefone">
-                <label for="txFone">Telefone</label>
-                <input type="number" name="fone" id="txtTelefone" placeholder="(XX) XXXXX-XXXX">
+                <label for="txtFone">Telefone</label>
+                <input type="text" name="fone" id="txtFone" placeholder="(XX) XXXXX-XXXX">
                 <!--    <div class="invalid feedback">Informe o telefone corretamente</div> -->
             </div>
 
-            <button onclick="">Enviar</button>
+            <button onclick="inserirContato()">Enviar</button>
 
         </div>
 
-        <table id="tbContacts">
-            <tbody>
-                <tr>
-                    <td>#ID</td>
-                    <td>Nome</td>
-                    <td>Cel</td>
-                    <td>Ação</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table">
+            <table id="tbContacts">
+                
+                    <thead>
+                        <td>#ID</td>
+                        <td>Nome</td>
+                        <td>Cel</td>
+                        <td>Ação</td>
+                    </thead>
+
+                <tbody>
+                    <tr>
+                        <td>#1</td>
+                        <td>Nathan Brito</td>
+                        <td>11999999999</td>
+                        <td><button onclick="">Delete</button></td> 
+                    </tr>
+
+                </tbody>
+            </table>
+    </div>
     </div>
     
 </body>
