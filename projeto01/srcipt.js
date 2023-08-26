@@ -3,7 +3,7 @@ let bd_contacts = []
 
 function inserirContato(){
     //criando o objeto contact
-    const contact = { /*o objeto contatob possui os atributos name e fone*/
+    const contact = { /*o objeto contato possui os atributos name e fone*/
         name: document.getElementById('txtNome').value,
         fone: document.getElementById('txtFone').value
     }
@@ -30,10 +30,15 @@ function getLocalStorage(){ /*get tira*/
 function setLocalStorage(bd_contacts){ /*se tem uma função get, normalmente tbm teremos uma função set*/ /*set guarda*/
 
     localStorage.setItem('bd_contacts', JSON.stringify(bd_contacts)) //primeiro é o identificador e o segundo é o vetor
-} 
+}
+//------------------------------------------------------------------------------------------------------------
+function cleanTable(){
+    /*vai limpar toda a tabela antes de receber novas informações*/
+    document.querySelector('#tbContacts>tbody').textContent=""
+}
 //------------------------------------------------------------------------------------------------------------
 function updateTeble(){
-    //clean table
+    cleanTable() //chamando a função d limpar a tabela
     const bd_contacts = getLocalStorage()
 
     bd_contacts.forEach(newRow)
@@ -53,12 +58,6 @@ function newRow(contact, index){
     `
 
     document.querySelector('#tbContacts>tbody').appendChild(line)
-
-}
-
-function cleanTable(){
-    /*vai limpar toda a tabela antes de receber novas informações*/
-
 
 }
 
