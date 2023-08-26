@@ -38,7 +38,7 @@ function cleanTable(){
 }
 //------------------------------------------------------------------------------------------------------------
 function updateTeble(){
-    cleanTable() //chamando a função d limpar a tabela
+    cleanTable() //chamando a função de limpar a tabela
     const bd_contacts = getLocalStorage()
 
     bd_contacts.forEach(newRow)
@@ -54,7 +54,7 @@ function newRow(contact, index){
             <td>${index}</td>
             <td>${contact.name}</td>
             <td>${contact.fone}</td>
-            <td><button>Delete</button>Ação</td>
+            <td><button>Delete</button></td>
     `
 
     document.querySelector('#tbContacts>tbody').appendChild(line)
