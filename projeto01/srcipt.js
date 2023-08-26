@@ -8,16 +8,16 @@ function inserirContato(){
         fone: document.getElementById('txtFone').value
     }
 
-    //chamando o banco de dados (array) 
+    //chamando o banco de dados (array) na função de baixo
     bd_contacts = getLocalStorage(); /* 'bd_contacts' vetor com várias informações dentro*/
-    console.log(bd_contacts)
+    console.log(bd_contacts) // escrevendo na tela o bd
 
     bd_contacts.push(contact) /*trazendo os novos valores para dentro do meu vetor (push)*/
 
     //armazenar os contatos do localStorage
     setLocalStorage(bd_contacts)
 
-    //atualizar a tabela após a inserção
+    //atualizar a tabela após a inserção chamando a função update ()
     updateTeble()
 
 }
@@ -60,5 +60,3 @@ function newRow(contact, index){
     document.querySelector('#tbContacts>tbody').appendChild(line)
 
 }
-
-//carregar os dados quandoa abrir a página 
