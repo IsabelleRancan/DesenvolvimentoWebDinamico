@@ -18,6 +18,8 @@ function inserirContato(){
     setLocalStorage(bd_contacts)
 
     //atualizar a tabela após a inserção chamando a função update ()
+    //ele chama a função e executa, mas não dá retorno
+    //seeu criar um const x = updateTable ele vai executar a função e me dar o return com o resultado e não apenas executar como o de cima 
     updateTeble()
 
 }

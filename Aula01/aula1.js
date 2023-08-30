@@ -1,5 +1,5 @@
 //var=>não respeita escopo e pode ser redefinida
-//let => respeita escopo e pode ser redefinida
+//let => é uma variável local, respeita escopo e pode ser redefinida
 //const => respeita escopo e não pode ser redefinida
 
 var a = 10; // inteiro
@@ -21,7 +21,7 @@ var arr = new Array();
 
 var arr2 = new Array(1, 2, 3, 4);
 
-var arr3 = [1, 2, 3, 4, 5];
+var arr3 = [1, 2, 3, 4, 5]; //capta e armazena valores
 
 var arr4 = new Array(5);
 
