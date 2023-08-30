@@ -48,7 +48,7 @@ function updateTeble(){
     
 }
 //------------------------------------------------------------------------------------------------------------
-function newRow(contact, index){
+function newRow(contact, index){ //usando o foreach, a palavra contact é a palavra criada pra assumir o valor da variável, poderia ser qualquer palavra
 
     const line = document.createElement('tr')
 
