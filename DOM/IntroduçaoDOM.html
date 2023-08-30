@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+</head>
+<body>
+
+    <h1>Intrudução ao DOM com o Guanabara (aula 09)</h1>
+    <p>Seletores JavaScript</p>
+    <p>Aprendendo a usar o <strong>DOM</strong></p>
+    <div class = "teste2" name ="teste" id="msg">Clique aqui</div>
+
+    <script>
+
+        //acessando elementos pela marcação
+        var p1 = window.document.getElementsByTagName('p')[0] //selecionando o elemento pelo nome da TAG (p) e especificando qual ele deve usar, nesse caso o 1° p (utilizando 0)
+        window.document.write('Está escrito assim: ' + p1.innerHTML) //inserirndo o texto utilizando a variável p1. A diferença entre innerText e innerHTML é que HTML já vem com toda a formatação e innerText só vem o conteúdo 
+
+        //acessando elementos pelo ID
+        var d = window.document.getElementById('msg') //esse vc só precisa especificar o id do elemento 
+
+        //acessando elementos por nome 
+        var n = window.document.getElementsByName('teste') [0] //este está no singular então eu preciso especirficar de qual eu estou falando (fazendo isso usando os colchetes)
+
+        //acessando pelo nome da classe 
+        window.document.getElementsByClassName('teste2')
+
+        //acessando o elemento por seletor 
+        window.document.querySelector('div.teste2') //fazendo a busca pelo nome da classe
+        
+        //para selecionar uma classe com o querySelector eu uso o .
+        //para selecionar uma div com o querySelector eu uso a #
+
+    </script>
+
+</body>
+</html>
