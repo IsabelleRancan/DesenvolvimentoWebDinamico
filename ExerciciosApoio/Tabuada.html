@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Números Pares</title>
+</head>
+<body>
+
+    <h1>Tabuada</h1>
+
+    <section id="result"></section>
+
+    <script>
+        let n = Number(window.prompt("Você gostaria de ver a Tabuada de qual número?: ")); 
+        let c = 1;
+        let resultado = 0;
+
+        while(c <= 10){
+            resultado = (n * c);
+
+            let res = document.getElementById("result");
+            res.innerHTML += `<p>${n} X ${c} = ${resultado}</p>`;
+
+            //document.write(n + ' x ' + c + ' = ' + resultado) - não consegui fazer a quebra de linha
+            c++;
+        } 
+    </script>
+    
+</body>
+</html>
