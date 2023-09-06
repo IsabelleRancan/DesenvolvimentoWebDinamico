@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h1>Arrays em JavaScript</h1>
+
+    <script>
+
+        //criando um array com elementos dentro
+        const fruits = ["Maça", "Banana", "Limão"];
+        const fruits1 = new Array ("Maça", "Banana", "Limão");
+
+        //acessando o vetor 
+        let entrar = fruits [0];
+        let entrar1 = entrar [entrar.length -1]; //acessando o último
+
+        //usando um loop para acessar um arrayx
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        //adicionando um elemento no array utilizando o método push
+        const fruits3 = ["Banana", "Orange", "Apple"];
+        fruits.push("Lemon");  // Adds a new element (Lemon) to fruits
+
+
+    </script>
+    
+</body>
+</html>

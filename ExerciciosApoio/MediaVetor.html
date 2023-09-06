@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Vetor</title>
+</head>
+<body>
+    
+<h1>Média dos Valores de um Vetor</h1>
+
+<script>
+    let n = Number (window.prompt("Digite o tamanho do seu vetor: "));
+    let numeros = [];
+    let numero = 0;
+    let soma = 0;
+
+    for(let i = 0; i < n; i++){
+        numeros [i] = Number (window.prompt("Digite um número: "));
+    }
+
+    for(let i = 0; i < n; i++){
+        soma += numeros[i];
+    }
+    
+    const media = soma / n;
+    document.write(media);
+    
+</script>
+
+</body>
+</html>
