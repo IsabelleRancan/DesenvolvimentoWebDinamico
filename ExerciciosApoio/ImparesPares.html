@@ -21,16 +21,16 @@
             numeros[i] = Number (window.prompt("Digite um númemro: "))
 
             if(numeros[i] % 2 == 0){
-                document.write(numeros[i]);
                 par++;
             } else{
-                document.write(numeros[i])
                 impar++;
             }
         }
 
         let res = document.getElementById("result");
         res.innerHTML += `<p>A quantidade de números pares que você digitou é de ${par} e a quantidade de ímpares é de ${impar}</p>`;
+        res.innerHTML += ` <p> ${numeros} </p>`;
+
 
     </script>
     
