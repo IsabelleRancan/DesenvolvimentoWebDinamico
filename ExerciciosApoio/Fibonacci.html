@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+
+</head>
+<body>
+
+    <h1>Fibonacci</h1>
+
+    <script>
+
+        let n = Number (window.prompt("Digite quantos digitos de Fibonacci você quer ver"));
+        let fibonacci = [];
+        let p1 = 0;
+        let p2 = 1;
+        fibonacci [0] = 1;
+
+        if (n == 0){
+            document.write("Digite um número diferente de zero.");
+        } else {
+        
+            for(let i = 1; i < n; i++){
+                fibonacci[i] = p1 + p2;
+                p1 = p2;
+                p2 = fibonacci [i];
+            }
+
+            document.write(fibonacci);
+        }
+
+    </script>
+    
+</body>
+</html>
