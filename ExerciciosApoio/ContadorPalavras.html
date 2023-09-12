@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de palavras</title>
+</head>
+<body>
+
+    <h1>Contador de palavras digitadas pelo usuário</h1>
+
+    <script>
+
+        let texto = String (window.prompt("Digite seu texto: "))
+        let palavras = []
+        
+        palavras = texto.value.trim().split(/\s+/);
+
+        document.write(palavras);
+    </script>
+
+</body>
+</html>
