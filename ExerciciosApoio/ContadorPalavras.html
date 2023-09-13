@@ -11,12 +11,19 @@
 
     <script>
 
-        let texto = String (window.prompt("Digite seu texto: "))
-        let palavras = []
-        
-        palavras = texto.value.trim().split(/\s+/);
+        const texto = String (window.prompt("Digite seu texto: "))
+         
+        const quantidadePalavras = texto
+        .split(" ")
+        .filter(conteudo=>{
+            if(conteudo !== ""){
+                return conteudo
+            }
+        }
+        )
+        .length
 
-        document.write(palavras);
+        document.write(quantidadePalavras);
     </script>
 
 </body>
