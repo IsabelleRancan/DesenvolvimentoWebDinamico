@@ -1,3 +1,5 @@
+const bd_contatos = [] // criando um array para salvar as informações dentro
+
 const enviar = document.getElementById('enviar')
 
 enviar.addEventListener('click', enviarDados)
@@ -16,6 +18,19 @@ function enviarDados(){
         nome: nome.value,
         fone: fone.value
     }
-     
-    console.log(dados)
+
+    //limpando os campos de input
+    nome.value = ""
+    fone.value = ""
+
+    bd_contatos = mostrandoDados()
+
+    console.log(bd_contatos)
+}
+
+function mostrandoDados(){
+    //entender esse uso de JSON
+    return (
+        JSON.parse(localStorage.getItem("bd_contacts")) || []
+      );
 }
