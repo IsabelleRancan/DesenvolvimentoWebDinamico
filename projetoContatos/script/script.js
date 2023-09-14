@@ -1,4 +1,4 @@
-const bd_contatos = [] // criando um array para salvar as informações dentro
+let bd_contatos = [] // criando um array para salvar as informações dentro
 
 const enviar = document.getElementById('enviar')
 
@@ -10,7 +10,7 @@ function enviarDados(){
     const nome = document.getElementById("txtNome")
     const fone = document.getElementById("txtFone")
     
-    if(!nome.value && !fone.value){
+    if(!nome.value || !fone.value){
         return (window.alert("Digite seus dados"))
     } 
 
@@ -23,14 +23,38 @@ function enviarDados(){
     nome.value = ""
     fone.value = ""
 
-    bd_contatos = mostrandoDados()
+    //trazendo o que eu já tenho guardado
+    bd_contatos = pegarDados()
+
+    //empurrando uma informação nova
+    bd_contatos.push(dados);
+
+    //guardadndo o que eu já tenho
+    guardarDados(bd_contatos);
+
+    atualizarTabela()
 
     console.log(bd_contatos)
 }
 
-function mostrandoDados(){
+function pegarDados(){
     //entender esse uso de JSON
     return (
-        JSON.parse(localStorage.getItem("bd_contacts")) || []
+        JSON.parse(localStorage.getItem("bd_contatos")) || []
       );
+}
+
+function guardarDados(bd_contatos){
+    localStorage.setItem("bd_contatos", JSON.stringify(bd_contatos));
+}
+
+function atualizarTabela(){
+    limparTabela()
+    bd_contatos = pegarDados()
+
+    
+}
+
+function limparTabela(){
+    table.innerHTML = "";
 }
