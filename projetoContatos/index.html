@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/style.scss">
+    <link rel="stylesheet" href="Style/style.css">
      <script defer src="script/script.js"></script> <!-- defer serve pra só inicializar o script após todo o html carregar -->
     <title>Contatos</title>
 </head>
@@ -12,11 +12,30 @@
 
     <div class="container">
         <div class="formulario">
-            <div class="dadosNome">
-                
+            <div class="dados-form">
+                <label for="txtNome">Nome</label>
+                <input type="text" id="txtNome" placeholder="Digite seu nome">
             </div>
-            <div class="dadosTelefone"></div>
+            <div class="dados-form">
+                <label for="txtFone">Telefone</label>
+                <input type="number" id="txtFone" placeholder="(XX) XXXXX-XXXX">
+            </div>
+            <button id="enviar">Enviar</button>
         </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Nome</td>
+                    <td>Telefone</td>
+                    <td>Ação</td>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
 
     </div>
     

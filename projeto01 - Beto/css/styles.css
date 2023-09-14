@@ -80,6 +80,7 @@ body {
   height: 100%;
   font-size: 1.4rem;
   text-align: center;
+  color: rgb(50, 50, 50);
 }
 .table table tbody {
   color: rgb(50, 50, 50);
