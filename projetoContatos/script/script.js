@@ -52,9 +52,30 @@ function atualizarTabela(){
     limparTabela()
     bd_contatos = pegarDados()
 
-    
+    //vai adicionar a linha com as informações existentes no bd
+    bd_contatos.forEach(novaLinha);
 }
 
 function limparTabela(){
     table.innerHTML = "";
 }
+
+function novaLinha(contato, index){
+    //index é o ID
+    const linha = document.createElement("tr");
+    linha.innerHTML = `
+        <td>${index}</td>
+        <td>${dados.nome}</td>
+        <td>${dados.fone}</td>
+        <td><button onClick=apagarContato(${index})>Apagar</button></td>
+    `;
+
+    //adicionando a linha na tabela
+    table.appendChild(linha);
+}
+
+// function apagarContato{
+
+// }
+
+atualizarTabela();
