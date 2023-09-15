@@ -68,5 +68,25 @@ html{
         thead{
             font-weight: 600;
         }
+
+        tbody{
+            td{
+                button{
+                    height: 4rem;
+                    width: 7rem;
+                    background-color: rgb(55 47 255);
+                    border: none;
+                    border-radius: .5rem;
+                    color: #fff;
+                    font-weight: 700;
+                    margin-left: 5rem;
+                }
+
+                #enviar:hover{
+                    background-color: rgb(82, 140, 247);
+                }
+            }
+        }
+        
     }
 }

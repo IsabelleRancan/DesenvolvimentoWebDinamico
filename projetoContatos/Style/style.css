@@ -60,4 +60,17 @@ html {
 }
 .container table thead {
   font-weight: 600;
+}
+.container table tbody td button {
+  height: 4rem;
+  width: 7rem;
+  background-color: rgb(55, 47, 255);
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 5rem;
+}
+.container table tbody td #enviar:hover {
+  background-color: rgb(82, 140, 247);
 }/*# sourceMappingURL=style.css.map */

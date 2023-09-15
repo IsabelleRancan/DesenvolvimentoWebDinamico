@@ -75,8 +75,14 @@ function novaLinha(dados, index){
     tabela.appendChild(linha);
 }
 
-// function apagarContato{
+function apagarContato(linha){
+    const lista = pegarDados()
 
-// }
+    lista.splice(linha, 1)
+
+    guardarDados(lista)
+
+    atualizarTabela()
+ }
 
 atualizarTabela();
