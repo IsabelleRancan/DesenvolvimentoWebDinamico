@@ -1,6 +1,7 @@
 let bd_contatos = [] // criando um array para salvar as informações dentro
 
 const enviar = document.getElementById('enviar')
+const tabela = document.querySelector('table>tbody')
 
 enviar.addEventListener('click', enviarDados)
 
@@ -57,10 +58,10 @@ function atualizarTabela(){
 }
 
 function limparTabela(){
-    table.innerHTML = "";
+    tabela.innerHTML = "";
 }
 
-function novaLinha(contato, index){
+function novaLinha(dados, index){
     //index é o ID
     const linha = document.createElement("tr");
     linha.innerHTML = `
@@ -71,7 +72,7 @@ function novaLinha(contato, index){
     `;
 
     //adicionando a linha na tabela
-    table.appendChild(linha);
+    tabela.appendChild(linha);
 }
 
 // function apagarContato{
