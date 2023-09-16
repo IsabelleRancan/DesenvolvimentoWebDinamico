@@ -28,7 +28,7 @@ html{
             font-size: 1.5rem;
             display: grid;
             grid-template-columns: 10rem 1fr;
-            margin: 5rem;
+            margin: 3rem;
             height: 4rem;
 
             label{
@@ -74,16 +74,15 @@ html{
                 button{
                     height: 4rem;
                     width: 7rem;
-                    background-color: rgb(55 47 255);
+                    background-color: rgb(248, 15, 15);
                     border: none;
                     border-radius: .5rem;
                     color: #fff;
                     font-weight: 700;
-                    margin-left: 5rem;
                 }
 
-                #enviar:hover{
-                    background-color: rgb(82, 140, 247);
+                button:hover{
+                    background-color: rgb(250, 85, 85);
                 }
             }
         }

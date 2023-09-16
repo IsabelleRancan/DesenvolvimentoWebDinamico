@@ -10,19 +10,22 @@ function enviarDados(){
 
     const nome = document.getElementById("txtNome")
     const fone = document.getElementById("txtFone")
+    const data = document.getElementById("txtData")
     
-    if(!nome.value || !fone.value){
+    if(!nome.value || !fone.value || !data.value){
         return (window.alert("Digite seus dados"))
     } 
 
     const dados = {
         nome: nome.value,
-        fone: fone.value
+        fone: fone.value,
+        data: data.value
     }
 
     //limpando os campos de input
     nome.value = ""
     fone.value = ""
+    data.value = ""
 
     //trazendo o que eu já tenho guardado
     bd_contatos = pegarDados()
@@ -68,6 +71,7 @@ function novaLinha(dados, index){
         <td>${index}</td>
         <td>${dados.nome}</td>
         <td>${dados.fone}</td>
+        <td>${dados.data}</td>
         <td><button onClick=apagarContato(${index})>Apagar</button></td>
     `;
 
@@ -76,6 +80,7 @@ function novaLinha(dados, index){
 }
 
 function apagarContato(linha){
+    //a variavel lista agora é um array identico ao array bd_contatos
     const lista = pegarDados()
 
     lista.splice(linha, 1)
