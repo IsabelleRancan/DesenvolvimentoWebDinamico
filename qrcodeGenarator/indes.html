@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRCode Genarator</title>
+    <link rel="stylesheet" href="/qrcodeGenarator/css/style.css">
+    <script src= "js/script.js" defer></script>
+</head>
+<body>
+    <section>
+        <div class="row">
+            <input type="color" class="light" value="#fff">
+            <input type="color" class="dark">
+            <select class="sizes">
+                <option value="100">100x100</option>
+                <option value="200">200x200</option>
+                <option value="300">300x300</option>
+                <option value="400">400x400</option>
+                <option value="500">500x500</option>
+                <option value="600">600x600</option>
+            </select>
+        </div>
+
+        <input type="text" class="qr-text" placeholder="Enter QR Text">
+
+        <div id="qr-code"></div>
+
+        <div class="action-container">
+            <button>Download</button>
+            <button>Share</button>
+        </div>
+
+
+    </section>
+
+
+    
+</body>
+</html>
