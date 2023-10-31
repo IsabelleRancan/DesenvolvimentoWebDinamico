@@ -17,7 +17,7 @@ search.addEventListener("click", ()=>{ //função anônima
     )
     .then((response) => response.json())
     .then((json) => {
-        //console.log(json);
+        console.log(json);
         if(json.cod ==="404"){
             container.style.height = '400px'; //vai aumentar a caixinha quando digitamos alguma coisa
             weatherBox.style.display = "none";
@@ -26,7 +26,6 @@ search.addEventListener("click", ()=>{ //função anônima
             error404.classList.add("fadeIn"); //efeito de aparecer ou desaparecer que tá no css  
             return;
         }
-
         const image = document.querySelector(".weather-box img")
         const temperature = document.querySelector(".weather-box .temperature")
         const description = document.querySelector(".weather-box .description")
@@ -62,7 +61,9 @@ search.addEventListener("click", ()=>{ //função anônima
 
         weatherBox.style.display = ''
         weatherDetails.style.display = ''
+        error404.style.display = "none";
         weatherBox.classList.add("fadeIn");
         weatherDetails.classList.add("fadeIn");
-        container.style.height = "600px";})
-});
+        container.style.height = "600px";
+    })
+})
