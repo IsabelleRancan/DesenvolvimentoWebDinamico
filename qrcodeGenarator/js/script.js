@@ -2,9 +2,9 @@ const dark = document.querySelector('.dark')
 const light = document.querySelector('.light')
 const qrContainer = document.querySelector('#qr-code')
 const qrText = document.querySelector('.qr-text')
-const sizer = document.querySelector('sizes')
+const sizer = document.querySelector('.sizes')
 const shareBtn = document.querySelector('.share-btn')
-const dowload = document.querySelector('.dowload-btn')
+const download = document.querySelector('.download-btn')
 
 let colorLight = '#fff',
     colorDark = '#000',
@@ -15,7 +15,9 @@ let colorLight = '#fff',
 dark.addEventListener('input', handleDarkColor);
 light.addEventListener('input', handleLightColor);
 qrText.addEventListener('input', handleQRText);
-sizes.addEventListener('change', handleSize);
+sizer.addEventListener('change', handleSize);
+
+// window.onload = generateQrCode()
 
 //criando função
 function handleDarkColor(e){
@@ -47,5 +49,22 @@ async function generateQrCode(){ //declaração de função assincrona
         width: size, 
         colorLight, 
         colorDark,
+    });
+    download.href = await resolveDataUrl()
+}
+
+function resolveDataUrl(){
+    return new Promise((resolve, reject)=> {
+        setTimeout(()=> {
+            const img = document.querySelector('#qr-code img');
+            if(img.currentSrc){
+                resolve(img.currentSrc);
+                return;
+            }
+            const canvas = document.querySelector('canvas');
+            resolve(canvas.toDataURL());
+        },50);
     })
 }
+
+generateQrCode()
