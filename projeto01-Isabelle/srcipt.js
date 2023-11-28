@@ -56,9 +56,18 @@ function newRow(contact, index){ //usando o foreach, a palavra contact é a pala
             <td>${index}</td>
             <td>${contact.name}</td>
             <td>${contact.fone}</td>
-            <td><button>Delete</button></td>
+            <td><button data-index="${index}" onclick="cleanLine()">Delete</button></td>
     `
 
     document.querySelector('#tbContacts>tbody').appendChild(line)
 
+}
+//------------------------------------------------------------------------------------------------------------
+function cleanLine(button){
+    const bd_contacts = getLocalStorage()
+    const index = button
+
+    bd_contacts.splice(index, 1); 
+    setLocalStorage(bd_contacts);
+    updateTeble();
 }
